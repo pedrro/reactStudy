@@ -1,0 +1,61 @@
+exports[`class HelloWorld extends /* istanbul ignore next */_react.Component {
+  constructor(props) {
+    super(props);
+    this.state = { greeting: 'Hello' };
+    this.frenchify = this.frenchify.bind(this);
+    this.back = this.back.bind(this);
+    this.removeGreeting = this.removeGreeting.bind(this);
+  }
+
+  frenchify() {
+    this.setState({ greeting: 'Bonjour' });
+  }
+
+  back() {
+    if (this.state.greeting === 'Bonjour') {
+      this.setState({ greeting: 'Hello' });
+    } else {
+      this.setState({ greeting: 'Bonjour' });
+
+    }
+  }
+
+  removeGreeting() {
+    this.props.removeGreeting(this.props.name);
+  }
+
+  render() {
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'HelloWorld', __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }, this.state.greeting, /* istanbul ignore next */' ', this.props.name, /* istanbul ignore next */'!',
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'frenchify', onClick: this.frenchify, __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this }, /* istanbul ignore next */'Frenchify!'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ onClick: this.back, __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this }, /* istanbul ignore next */'move back!'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'removeGreeting', onClick: this.removeGreeting, __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }, /* istanbul ignore next */'Remove Me!')));
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="HelloWorld">
+  Hello
+   
+  Person
+  !
+  <br />
+  <button
+    className="frenchify"
+    onClick={[Function]}>
+    Frenchify!
+  </button>
+  <button
+    onClick={[Function]}>
+    move back!
+  </button>
+  <br />
+  <button
+    className="removeGreeting"
+    onClick={[Function]}>
+    Remove Me!
+  </button>
+</div>
+`;
